@@ -64,29 +64,29 @@ function imc() {
             magreza.style.backgroundColor = '#ffbf00'
             imptautra.value = ""
             imptpeso.value = ""
-            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Magreza`)
+            result.innerText = (`Seu calculo de IMC é de ${resultado} kg/m². Portando sua classificação é Magreza.`)
         } else if (resultado >= 18.5 && resultado < 24.9) {
-            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Normal`)
+            result.innerText = (`Seu calculo de IMC é de ${resultado} kg/m². Portando sua classificação é Normal.`)
             normal.style.backgroundColor = '#bbefc0'
             imptautra.value = ""
             imptpeso.value = ""
         } else if (resultado > 25 && resultado < 29.9) {
-            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Sobrepeso`)
+            result.innerText = (`Seu calculo de IMC é de ${resultado} kg/m². Portando sua classificação é Sobrepeso.`)
             sobrepeso.style.backgroundColor = '#ffbf00'
             imptautra.value = ""
             imptpeso.value = ""
         } else if (resultado > 30 && resultado < 34.9) {
-            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Obesidade grau I`)
+            result.innerText = (`Seu calculo de IMC é de ${resultado} kg/m². Portando sua classificação é Obesidade grau I.`)
             grau1.style.backgroundColor = '#ff8000'
             imptautra.value = ""
             imptpeso.value = ""
         } else if (resultado > 35 && resultado < 39.9) {
-            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Obesidade grau II`)
+            result.innerText = (`Seu calculo de IMC é de ${resultado} kg/m². Portando sua classificação é Obesidade grau II.`)
             grau2.style.backgroundColor = '#ff4000'
             imptautra.value = ""
             imptpeso.value = ""
         } else if (resultado >= 40) {
-            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Obesidade grau III`)
+            result.innerText = (`Seu calculo de IMC é de ${resultado} kg/m². Portando sua classificação é Obesidade grau III.`)
             grau3.style.backgroundColor = '#ff0000'
             imptautra.value = ""
             imptpeso.value = ""
