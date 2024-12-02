@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const altura = document.getElementById("altura")
+    altura.focus()
+})
+document.addEventListener("keydown", (evento) => {
+    if (evento.key === "Enter") {
+        imc()
+        const altura = document.getElementById("altura")
+        altura.focus()
+    }
+})
+document.querySelector("button").addEventListener("click", () => {
+    const altura = document.getElementById("altura")
+    altura.focus()
+    altura.innerText = ""
+})
 function validador(altura, peso) {
     let spanAl = document.getElementById("errorAltura")
     let spanPe = document.getElementById("errorPeso")
@@ -20,9 +36,9 @@ function validador(altura, peso) {
 }
 function imc() {
     let altura = 0;
-    altura = document.getElementById('altura').value;
+    altura = document.getElementById('altura').value
     let peso = 0;
-    peso = document.getElementById('peso').value;
+    peso = document.getElementById('peso').value
     let validador2 = false
     validador2 = validador(altura, peso)
     if (validador2) {
@@ -36,6 +52,8 @@ function imc() {
         let grau2 = document.getElementById("grau2")
         let grau3 = document.getElementById("grau3")
         let result = document.getElementById("result")
+        let imptautra = document.getElementById("altura")
+        let imptpeso = document.getElementById("peso")
         magreza.style.backgroundColor = ''
         normal.style.backgroundColor = ''
         sobrepeso.style.backgroundColor = ''
@@ -44,22 +62,34 @@ function imc() {
         grau3.style.backgroundColor = ''
         if (resultado < 18.5) {
             magreza.style.backgroundColor = '#ffbf00'
-            result.innerText = `Seu calculo de IMC é ${resultado} de portando sua classificação é  Magreza`
+            imptautra.value = ""
+            imptpeso.value = ""
+            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Magreza`)
         } else if (resultado >= 18.5 && resultado < 24.9) {
-            result.innerText = `Seu calculo de IMC é ${resultado} de portando sua classificação é  Normal`
+            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Normal`)
             normal.style.backgroundColor = '#bbefc0'
+            imptautra.value = ""
+            imptpeso.value = ""
         } else if (resultado > 25 && resultado < 29.9) {
-            result.innerText = `Seu calculo de IMC é ${resultado} de portando sua classificação é  Sobrepeso`
+            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Sobrepeso`)
             sobrepeso.style.backgroundColor = '#ffbf00'
+            imptautra.value = ""
+            imptpeso.value = ""
         } else if (resultado > 30 && resultado < 34.9) {
-            result.innerText = `Seu calculo de IMC é ${resultado} de portando sua classificação é  Obesidade grau I`
+            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Obesidade grau I`)
             grau1.style.backgroundColor = '#ff8000'
+            imptautra.value = ""
+            imptpeso.value = ""
         } else if (resultado > 35 && resultado < 39.9) {
-            result.innerText = `Seu calculo de IMC é ${resultado} de portando sua classificação é  Obesidade grau II`
+            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Obesidade grau II`)
             grau2.style.backgroundColor = '#ff4000'
+            imptautra.value = ""
+            imptpeso.value = ""
         } else if (resultado >= 40) {
-            result.innerText = `Seu calculo de IMC é ${resultado} de portando sua classificação é  Obesidade grau III`
+            result.innerText = (`Seu calculo de IMC é ${resultado} kg/m² de portando sua classificação é  Obesidade grau III`)
             grau3.style.backgroundColor = '#ff0000'
+            imptautra.value = ""
+            imptpeso.value = ""
         }
     }
 }
